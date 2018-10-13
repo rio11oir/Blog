@@ -5,6 +5,6 @@ WORKDIR /blog
 COPY Gemfile /blog/Gemfile
 COPY Gemfile.lock /blog/Gemfile.lock
 RUN bundle install
+EXPOSE 3000
 COPY . /blog
-
-CMD ["bundle", "exec", "rails", "server"]
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]

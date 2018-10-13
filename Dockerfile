@@ -6,3 +6,5 @@ COPY Gemfile /blog/Gemfile
 COPY Gemfile.lock /blog/Gemfile.lock
 RUN bundle install
 COPY . /blog
+
+CMD ["rails server"]
